@@ -1,1 +1,87 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Green Go Market — Menú</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    /* Pequeños estilos específicos para la página de Menú */
+    .menu-hero { display:flex; gap:18px; align-items:stretch; margin-top:18px }
+    .cat-card{ position:relative; flex:1; min-height:160px; border-radius:10px; overflow:hidden; box-shadow:0 2px 6px rgba(0,0,0,0.04) }
+    .cat-card img{ width:100%; height:100%; object-fit:cover; display:block }
+    .cat-card .overlay{ position:absolute; inset:0; background:linear-gradient(180deg, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0.45) 100%); color:white; display:flex; flex-direction:column; justify-content:flex-end; padding:18px }
+    .cat-card h3{ margin:0 0 6px; font-size:20px }
+    .cat-card p{ margin:0;font-size:14px;opacity:0.95 }
+    @media (max-width:900px){ .menu-hero{flex-direction:column} }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo">
+      <img src="assets/logo.svg" alt="Green Go Market" />
+    </div>
+    <nav class="top-nav">
+      <a href="index.html">Inicio</a>
+      <a href="menu.html">Menú</a>
+      <a href="catalog.html">Catálogo</a>
+      <div class="search-cart">
+        <input class="search" placeholder="Buscar productos..." aria-label="Buscar" />
+        <button class="cart-btn" aria-label="Ver carrito">
+          <img src="assets/icon-cart.svg" alt="Carrito" />
+          <span class="cart-badge" aria-hidden="true">0</span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <div class="page-wrap">
+    <aside class="side-nav">
+      <ul>
+        <li class="active">Toda la venta</li>
+        <li>Comidas</li>
+        <li>Cosas de uso</li>
+      </ul>
+    </aside>
+
+    <main class="main">
+      <section class="categories">
+        <h2>Explora Nuestras Categorías</h2>
+        <div class="menu-hero">
+          <article class="cat-card">
+            <img src="https://www.shutterstock.com/image-photo/assortment-vibrant-fresh-fruits-vegetables-600nw-2560984363.jpg" alt="Toda la venta" />
+            <div class="overlay">
+              <h3>Toda la Venta</h3>
+              <p>Descubre nuestra amplia selección de productos frescos y orgánicos para cada necesidad.</p>
+            </div>
+          </article>
+
+          <article class="cat-card">
+            <img src="https://pymstatic.com/102364/conversions/tipos-frutas-social.jpg" alt="Comidas" />
+            <div class="overlay">
+              <h3>Comidas</h3>
+              <p>Explora nuestra colección de alimentos saludables listos para disfrutar, desde ingredientes hasta platos preparados.</p>
+            </div>
+          </article>
+
+          <article class="cat-card">
+            <img src="https://bluesphera.com/wp-content/uploads/2025/04/productos-limpieza-ecologica-0003.jpg" alt="Cosas de uso" />
+            <div class="overlay">
+              <h3>Cosas de Uso</h3>
+              <p>Encuentra productos ecológicos esenciales para el hogar, cuidado personal y un estilo de vida sostenible.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <footer class="site-footer">
+        <p>&copy; <span id="year"></span> Green Go Market — Todos los derechos reservados</p>
+      </footer>
+    </main>
+  </div>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script src="assets/js/cart.js"></script>
+</body>
+</html>
 
