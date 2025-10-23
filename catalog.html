@@ -1,1 +1,264 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Green Go Market — Catálogo</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo">
+      <img src="assets/logo.svg" alt="Green Go Market" />
+    </div>
+    <nav class="top-nav">
+      <a href="index.html">Inicio</a>
+      <a href="menu.html">Menú</a>
+      <a href="catalog.html">Catálogo</a>
+      <div class="search-cart">
+        <input class="search" placeholder="Buscar productos..." aria-label="Buscar" />
+        <button class="cart-btn" aria-label="Ver carrito">
+          <img src="assets/icon-cart.svg" alt="Carrito" />
+          <span class="cart-badge" aria-hidden="true">0</span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <div class="page-wrap">
+    <aside class="side-nav">
+      <ul>
+        <li class="active">Toda la venta</li>
+        <li>Comidas</li>
+        <li>Cosas de uso</li>
+      </ul>
+    </aside>
+
+    <main class="main">
+      <section class="catalog">
+        <h1 style="text-align:center;margin-top:6px">Todos Nuestros Productos</h1>
+        <div class="filter-bar" role="toolbar" aria-label="Filtrar por categoría">
+          <button class="filter-btn active" data-filter="all">Todos</button>
+          <button class="filter-btn" data-filter="frescos">Alimentos Frescos y Orgánicos</button>
+          <button class="filter-btn" data-filter="hogar">Artículos para el Hogar Sostenibles</button>
+        </div>
+        <div class="products-grid" style="margin-top:20px">
+          <!-- Primera fila -->
+          <div class="product-card" data-cat="frescos">
+            <img src="https://www.shutterstock.com/image-photo/close-fresh-organic-vegetables-fruits-600nw-2508062141.jpg" alt="Cesta Variada Organica" />
+            <div class="product-info">
+              <h4>Cesta Variada Orgánica</h4>
+              <p class="price">S/. 25.00</p>
+              <button class="btn-add">Añadir al Carrito</button>
+            </div>
+          </div>
+
+          <div class="product-card" data-cat="frescos">
+            <img src="https://m.media-amazon.com/images/I/51p-650FDNL._UF1000,1000_QL80_.jpg" alt="Aguacates" />
+            <div class="product-info">
+              <h4>Aguacates Orgánicos (3 un.)</h4>
+              <p class="price">S/. 4.50</p>
+              <button class="btn-add">Añadir al Carrito</button>
+            </div>
+          </div>
+
+          <div class="product-card" data-cat="frescos">
+            <img src="https://www.infobae.com/resizer/v2/BXHYVKXWTVFC5O7QNNH3LXF32A.jpg?auth=b819a8d08570203c26eed5bd9c4267f02c466eab3f9ee194e87f5dfa808d4817&smart=true&width=1200&height=1200&quality=85" alt="Pan Artesanal Integral" />
+            <div class="product-info">
+              <h4>Pan Artesanal Integral</h4>
+              <p class="price">S/. 3.80</p>
+              <button class="btn-add">Añadir al Carrito</button>
+            </div>
+          </div>
+
+          <div class="product-card" data-cat="frescos">
+            <img src="https://sweetgoldcr.com/wp-content/uploads/2020/10/Pureza.jpg" alt="Miel Pura" />
+            <div class="product-info">
+              <h4>Miel Pura de Abeja (500g)</h4>
+              <p class="price">S/. 7.20</p>
+              <button class="btn-add">Añadir al Carrito</button>
+            </div>
+          </div>
+
+          <div class="product-card" data-cat="frescos">
+            <img src="https://cdn.wikifarmer.com/images/detailed/2023/10/iStock-1068858270-2048x1233-1.jpg" alt="Huevos" />
+            <div class="product-info">
+              <h4>Huevos de Corral (6 un.)</h4>
+              <p class="price">S/. 3.10</p>
+              <button class="btn-add">Añadir al Carrito</button>
+            </div>
+          </div>
+
+          <!-- Segunda fila -->
+          <div class="product-card" data-cat="otros">
+            <img src="https://lacomunal.es/wp-content/uploads/2023/04/versatilidad-aove-gastronomia_dest-1000x565.jpg" alt="Aceite de Oliva" />
+            <div class="product-info">
+              <h4>Aceite de Oliva Virgen Extra</h4>
+              <p class="price">S/. 12.99</p>
+              <button class="btn-add">Añadir al Carrito</button>
+            </div>
+          </div>
+            <div class="product-card" data-cat="frescos">
+          <div class="product-card" data-cat="frescos">
+            <img src="https://images.unsplash.com/photo-1570543375343-63fe3d67761b?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dG9tYXRlJTIwY2hlcnJ5fGVufDB8fDB8fHww&fm=jpg&q=60&w=3000" alt="Tomates Cherry" />
+            <div class="product-info">
+              <h4>Tomates Cherry Orgánicos</h4>
+              <p class="price">S/. 2.75</p>
+              <button class="btn-add">Añadir al Carrito</button>
+            </div>
+          </div>
+
+          <div class="product-card" data-cat="otros">
+            <img src="https://cafe-peruano.com/sistema/admin/vistas/img/productos/cafe-de-oxapampa-tostado-molido.jpg" alt="Cafe en grano" />
+            <div class="product-info">
+              <h4>Café en Grano Orgánico (250g)</h4>
+              <p class="price">S/. 9.50</p>
+              <button class="btn-add">Añadir al Carrito</button>
+            </div>
+          </div>
+            <div class="product-card" data-cat="frescos">
+          <div class="product-card" data-cat="hogar">
+            <img src="https://besco.com.pe/blog/wp-content/uploads/2021/03/Golden-potus.jpg" alt="Planta Decorativa" />
+            <div class="product-info">
+              <h4>Planta Decorativa</h4>
+              <p class="price">S/. 18.00</p>
+              <button class="btn-add">Añadir al Carrito</button>
+            </div>
+          </div>
+
+          <div class="product-card" data-cat="hogar">
+            <img src="https://static-catalog.tiendamia.com/marketplace_manager_service/production/product_2ff82e0a_mirakl_image_3_large.jpg" alt="Set Utensilios" />
+            <div class="product-info">
+              <h4>Set Utensilios Bambú</h4>
+              <p class="price">S/. 15.99</p>
+              <button class="btn-add">Añadir al Carrito</button>
+            </div>
+          </div>
+
+          <!-- Tercera fila -->
+          <div class="product-card" data-cat="hogar">
+            <img src="https://www.clotsybrand.com/cdn/shop/articles/getergente-ecologico.webp?v=1676298640" alt="Detergente Ecologico" />
+            <div class="product-info">
+              <h4>Detergente Ecológico (1L)</h4>
+              <p class="price">S/. 8.70</p>
+              <button class="btn-add">Añadir al Carrito</button>
+            </div>
+          </div>
+
+          <div class="product-card" data-cat="hogar">
+            <img src="https://promart.vteximg.com.br/arquivos/ids/6421000-1000-1000/image-4a18e8570b4e46dc80a6e2d93fedf9a0.jpg?v=637964424191030000" alt="Cepillos de Dientes" />
+            <div class="product-info">
+              <h4>Cepillos de Dientes Bambú</h4>
+              <p class="price">S/. 6.50</p>
+              <button class="btn-add">Añadir al Carrito</button>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Secciones adicionales similares a la maqueta -->
+        <h2 style="text-align:center;margin-top:48px">Alimentos Frescos y Orgánicos</h2>
+        <div class="products-grid" style="margin-top:18px">
+          <!-- repetir algunos productos como ejemplo -->
+          <div class="product-card" data-cat="frescos">
+            <img src="assets/product-placeholder.svg" alt="Cesta Variada" />
+            <div class="product-info">
+              <h4>Cesta Variada Orgánica</h4>
+              <p class="price">S/. 25.00</p>
+              <button class="btn-add">Añadir al Carrito</button>
+            </div>
+          </div>
+
+          <div class="product-card" data-cat="frescos">
+            <img src="assets/product-placeholder.svg" alt="Aguacates" />
+            <div class="product-info">
+              <h4>Aguacates Orgánicos (3 un.)</h4>
+              <p class="price">S/. 4.50</p>
+              <button class="btn-add">Añadir al Carrito</button>
+            </div>
+          </div>
+
+          <div class="product-card" data-cat="frescos">
+            <img src="assets/product-placeholder.svg" alt="Pan" />
+            <div class="product-info">
+              <h4>Pan Artesanal Integral</h4>
+              <p class="price">S/. 3.80</p>
+              <button class="btn-add">Añadir al Carrito</button>
+            </div>
+          </div>
+            <div class="product-card" data-cat="frescos">
+          <div class="product-card" data-cat="frescos">
+            <img src="assets/product-placeholder.svg" alt="Miel" />
+            <div class="product-info">
+              <h4>Miel Pura de Abeja (500g)</h4>
+              <p class="price">S/. 7.20</p>
+              <button class="btn-add">Añadir al Carrito</button>
+            </div>
+          </div>
+
+          <div class="product-card" data-cat="frescos">
+            <img src="assets/product-placeholder.svg" alt="Huevos" />
+            <div class="product-info">
+              <h4>Huevos de Corral (6 un.)</h4>
+              <p class="price">S/. 3.10</p>
+              <button class="btn-add">Añadir al Carrito</button>
+            </div>
+          </div>
+        </div>
+
+        <h2 style="text-align:center;margin-top:48px">Artículos para el Hogar Sostenibles</h2>
+        <div class="products-grid" style="margin-top:18px; margin-bottom:40px">
+          <div class="product-card" data-cat="hogar">
+            <img src="assets/product-placeholder.svg" alt="Planta" />
+            <div class="product-info">
+              <h4>Planta Decorativa</h4>
+              <p class="price">S/. 18.00</p>
+              <button class="btn-add">Añadir al Carrito</button>
+            </div>
+          </div>
+
+          <div class="product-card" data-cat="hogar">
+            <img src="assets/product-placeholder.svg" alt="Set Utensilios" />
+            <div class="product-info">
+              <h4>Set Utensilios Bambú</h4>
+              <p class="price">S/. 15.99</p>
+              <button class="btn-add">Añadir al Carrito</button>
+            </div>
+          </div>
+
+          <div class="product-card" data-cat="hogar">
+            <img src="assets/product-placeholder.svg" alt="Detergente" />
+            <div class="product-info">
+              <h4>Detergente Ecológico (1L)</h4>
+              <p class="price">S/. 8.70</p>
+              <button class="btn-add">Añadir al Carrito</button>
+            </div>
+          </div>
+
+          <div class="product-card" data-cat="hogar">
+            <img src="assets/product-placeholder.svg" alt="Cepillos" />
+            <div class="product-info">
+              <h4>Cepillos de Dientes Bambú</h4>
+              <p class="price">S/. 6.50</p>
+              <button class="btn-add">Añadir al Carrito</button>
+            </div>
+          </div>
+
+        </div>
+
+      </section>
+
+      <footer class="site-footer">
+        <p>&copy; <span id="year"></span> Green Go Market — Todos los derechos reservados</p>
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+  <script src="assets/js/cart.js"></script>
+  <script src="assets/js/catalog-filter.js"></script>
+</body>
+</html>
 
