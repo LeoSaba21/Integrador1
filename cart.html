@@ -1,1 +1,96 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Green Go Market — Carrito</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    /* Cart page specific styles */
+    .cart-page{padding:24px}
+    .cart-wrap{max-width:980px;margin:28px auto;background:#fff;padding:18px;border-radius:10px;box-shadow:0 6px 20px rgba(0,0,0,0.04)}
+    .cart-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
+    .cart-list{display:flex;flex-direction:column;gap:12px}
+    .cart-item{display:grid;grid-template-columns:1fr 130px 90px 36px;gap:12px;align-items:center;padding:10px;border-radius:8px;border:1px solid #f0f0f0}
+    .ci-name{font-weight:600}
+    .ci-qty{display:flex;align-items:center;gap:8px}
+    .ci-qty button{width:28px;height:28px;border-radius:6px;border:1px solid #ddd;background:white}
+    .ci-count{min-width:28px;text-align:center}
+    .ci-price{text-align:right;color:var(--green-dark);font-weight:700}
+    .ci-remove{background:transparent;border:none;color:#888;font-size:16px}
+    .cart-summary{display:flex;justify-content:space-between;align-items:center;margin-top:18px}
+    .cart-empty{color:#666;padding:24px;text-align:center}
+    .cart-actions{display:flex;gap:10px}
+    .btn-clear{background:#eee;border:1px solid #ddd;padding:8px 12px;border-radius:8px}
+    .btn-checkout{background:var(--green);color:white;border:none;padding:8px 12px;border-radius:8px}
+    @media (max-width:700px){ .cart-item{grid-template-columns:1fr 80px 70px 32px} }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo"><img src="assets/logo.svg" alt="Green Go Market" /></div>
+    <nav class="top-nav">
+      <a href="index.html">Inicio</a>
+      <a href="menu.html">Menú</a>
+      <a href="catalog.html">Catálogo</a>
+      <div class="search-cart">
+        <input class="search" placeholder="Buscar productos..." aria-label="Buscar" />
+        <button class="cart-btn" aria-label="Ver carrito">
+          <img src="assets/icon-cart.svg" alt="Carrito" />
+          <span class="cart-badge" aria-hidden="true">0</span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="main cart-page">
+    <div class="cart-wrap">
+      <div class="cart-header">
+        <h2>Tu Carrito</h2>
+        <div class="cart-info">Items: <strong class="cart-count">0</strong></div>
+      </div>
+
+      <div class="cart-list" aria-live="polite"></div>
+      <div class="cart-empty" style="display:none">Tu carrito está vacío. Añade productos desde el catálogo.</div>
+
+      <div class="cart-summary">
+        <div class="cart-actions">
+          <button class="btn-clear" id="clear-cart">Vaciar carrito</button>
+        </div>
+        <div>
+          Total: S/. <span class="cart-total">0.00</span>
+          <button class="btn-checkout" id="checkout">Finalizar compra</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer"><p>&copy; <span id="year"></span> Green Go Market — Todos los derechos reservados</p></footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script src="assets/js/cart.js"></script>
+  <script>
+    // extra wiring for clear/checkout buttons
+    document.addEventListener('DOMContentLoaded', ()=>{
+      const clearBtn = document.getElementById('clear-cart');
+      const checkoutBtn = document.getElementById('checkout');
+      clearBtn.addEventListener('click', ()=>{
+        if(confirm('¿Vaciar el carrito?')){
+          localStorage.removeItem('green-go-cart');
+          // re-render by reloading the page (cart.js will pick up the change)
+          location.reload();
+        }
+      });
+      checkoutBtn.addEventListener('click', ()=>{
+        const cart = localStorage.getItem('green-go-cart');
+        if(!cart){ alert('Tu carrito está vacío.'); return; }
+        // Simple checkout placeholder
+        alert('Gracias por tu compra (simulado).');
+        localStorage.removeItem('green-go-cart');
+        location.reload();
+      });
+    });
+  </script>
+</body>
+</html>
 
